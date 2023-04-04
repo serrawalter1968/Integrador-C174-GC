@@ -18,6 +18,7 @@ a {
   position: fixed;
   display: flex;
   vertical-align: middle;
+  justify-content: space-evenly;
   background-color: beige;
   width: 100%;
   z-index: 1;
@@ -33,6 +34,14 @@ a {
 
 .menu li {
   margin: 0 1.5rem 0 0;
+}
+
+.empresa {
+  position: relative;
+  right: 400px;
+  font-weight: 100;
+  font-size: 700;
+  font-style: italic;
 }
 
 .main {
