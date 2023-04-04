@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -18,4 +24,25 @@ a {
 
 .menu li {
   margin: 0 1.5rem 0 0;
+}
+
+.contacto {
+  text-align: center;
+  font: 2.5rem;
+  padding: 1.5rem;
+  border: 0.1rem solid rgb(0, 0, 0);
+}
+
+.redes {
+  width: 100%;
+  margin: 1.2rem;
+  display: flex;
+  justify-content: center;
+  border: 0.1rem solid rgb(0, 0, 0);
+  background-color: dimgray;
+}
+
+.redes li {
+  margin: 1.2rem;
+  list-style: none;
 }
