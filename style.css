@@ -15,9 +15,12 @@ a {
 }
 
 .header {
+  position: fixed;
   display: flex;
   vertical-align: middle;
-  border: 0.5px solid rgb(0, 0, 0);
+  background-color: beige;
+  width: 100%;
+  z-index: 1;
 }
 
 .menu {
@@ -32,12 +35,18 @@ a {
   margin: 0 1.5rem 0 0;
 }
 
+.main {
+  position: relative;
+  top: 30px;
+}
+
 .productos {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex: 80px;
   justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .card {
