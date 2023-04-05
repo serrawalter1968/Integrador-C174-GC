@@ -44,6 +44,12 @@ a {
   font-style: italic;
 }
 
+.presentacion {
+  position: relative;
+  top: 30px;
+  width: 100%;
+}
+
 .main {
   position: relative;
   top: 30px;
