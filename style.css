@@ -23,6 +23,7 @@ a {
   background-color: rgb(197, 197, 197);
   width: 100%;
   z-index: 1;
+  box-shadow: 10px 5px 5px rgb(102, 101, 101);
 }
 
 .menu {
@@ -45,11 +46,16 @@ a {
   font-style: italic;
 }
 
+.nombre {
+  font-weight: 300;
+  font-size: 800;
+  font-style: italic;
+}
+
 .presentacion {
   position: relative;
   top: 30px;
   width: 100%;
-  box-shadow: 10px 5px 5px black;
 }
 
 .main {
@@ -117,4 +123,9 @@ a {
 .redes li {
   margin: 1.2rem;
   list-style: none;
+}
+
+.programador {
+  color: darkblue;
+  text-shadow: 2px 4px 4px rgb(12, 3, 54);
 }
