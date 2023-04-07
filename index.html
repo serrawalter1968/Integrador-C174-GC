@@ -30,16 +30,16 @@
           height="70px"
         />
       </div>
-      <menu class="menu" id="menu">
+      <nav class="menu" id="menu">
         <ul class="menu">
-          <a href="#presentacion"><li class="btn btn-secondary">Inicio</li></a>
-          <a href="#productos"><li class="btn btn-secondary">Productos</li></a>
-          <a href="#suscripcion"
-            ><li class="btn btn-secondary">Suscripcion</li></a
-          >
+          <li><a class="btn btn-secondary" href="#presentacion">Inicio</a></li>
+          <li><a class="btn btn-secondary" href="#productos">Productos</a></li>
+          <li>
+            <a class="btn btn-secondary" href="#suscripcion">Suscripcion</a>
+          </li>
           <a href="#contacto"><li class="btn btn-secondary">Nosotr@s</li></a>
         </ul>
-      </menu>
+      </nav>
       <section>
         <h1 class="empresa">174</h1>
       </section>
@@ -250,12 +250,12 @@
         <!-- FORMUALRIO DE SUSCRIPCION AL NEWSLETTER -->
         <form class="row g-3">
           <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" />
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" />
           </div>
           <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Password</label>
-            <input type="password" class="form-control" id="inputPassword4" />
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" />
           </div>
           <div class="col-12">
             <label for="inputAddress" class="form-label"
@@ -265,17 +265,6 @@
               type="text"
               class="form-control"
               id="inputAddress"
-              placeholder="Calle Nro Ciudad Provincia ..."
-            />
-          </div>
-          <div class="col-12">
-            <label for="inputAddress2" class="form-label"
-              >Dirección Comercial</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="inputAddress2"
               placeholder="Calle Nro ..."
             />
           </div>

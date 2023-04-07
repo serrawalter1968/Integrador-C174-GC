@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 .header {
   position: fixed;
   display: flex;
