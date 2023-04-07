@@ -104,8 +104,20 @@ li {
   margin-bottom: 3.5rem;
   margin-left: 2.5rem;
   text-align: center;
-  background-color: rgb(59, 84, 164);
-  box-shadow: 5px 5px 5px black;
+  background-color: rgb(162, 175, 224);
+  box-shadow: 5px 5px 5px rgb(44, 48, 65);
+}
+
+.nosotros {
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+  margin-left: 2.5rem;
+  width: 90%;
+  background-color: rgb(213, 215, 219);
+  box-shadow: 5px 5px 5px rgb(44, 48, 65);
+  font-style: italic;
+  font-weight: 300;
 }
 
 .contacto {
@@ -131,6 +143,6 @@ li {
 }
 
 .programador {
-  color: rgb(254, 254, 255);
-  text-shadow: 2px 4px 4px rgb(3, 2, 7);
+  color: rgb(108, 171, 223);
+  text-shadow: 2px 3px 3px rgb(248, 247, 250);
 }
