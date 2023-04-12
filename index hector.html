@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./assets/images/174.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script
+        <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"
@@ -20,7 +23,6 @@
     <title>Calzados 174</title>
   </head>
   <body>
-    <!-- Header y Menu de la Pagina -->
     <header class="header" id="header">
       <div class="logo" id="logo">
         <img
@@ -31,21 +33,20 @@
           height="70px"
         />
       </div>
-      <nav class="menu" id="menu">
+      <menu class="menu" id="menu">
         <ul class="menu">
-          <li><a class="btn btn-secondary" href="#presentacion">Inicio</a></li>
-          <li><a class="btn btn-secondary" href="#productos">Productos</a></li>
-          <li>
-            <a class="btn btn-secondary" href="#suscripcion">Suscripcion</a>
-          </li>
-          <a href="#nosotros"><li class="btn btn-secondary">Nosotr@s</li></a>
+          <a href="#presentacion"><li class="btn btn-secondary">Home</li></a>
+          <a href="#productos"><li class="btn btn-secondary">Productos</li></a>
+          <a href="#suscripcion"
+            ><li class="btn btn-secondary">Suscripcion</li></a
+          >
+          <a href="#contacto"><li class="btn btn-secondary">Contacto</li></a>
         </ul>
-      </nav>
+      </menu>
       <section>
         <h1 class="empresa">174</h1>
       </section>
     </header>
-    <!-- Imagenes de presentacion de la marca -->
     <section class="presentacion" id="presentacion">
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
@@ -54,8 +55,6 @@
               src="./assets/images/tacones.webp"
               class="d-block w-100"
               alt="Zapatos"
-              width="320"
-              height="680"
             />
           </div>
           <div class="carousel-item">
@@ -63,8 +62,6 @@
               src="./assets/images/tacones2.webp"
               class="d-block w-100"
               alt="Zapatos"
-              width="320"
-              height="680"
             />
           </div>
           <div class="carousel-item">
@@ -72,8 +69,6 @@
               src="./assets/images/tacones3.webp"
               class="d-block w-100"
               alt="Zapatos"
-              width="320"
-              height="680"
             />
           </div>
         </div>
@@ -97,26 +92,8 @@
         </button>
       </div>
     </section>
-    <!-- Muestra de los productos de la marca -->
     <main class="main" id="main">
       <section class="productos container" id="productos">
-        <div class="card" style="width: 18rem">
-          <img
-            src="./assets/images/zapato ejemplo.jpg"
-            class="card-img-top"
-            alt="Zapatos"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-          <div class="card-body">
-            <button class="btn btn-light">Detalles</button>
-          </div>
-        </div>
         <div class="card" style="width: 18rem">
           <img
             src="./assets/images/zapato ejemplo.jpg"
@@ -254,24 +231,38 @@
           </div>
         </div>
       </section>
+            
       <section class="suscripcion" id="suscripcion">
         <h2>Completa el formulario para recibir nuestro NEWSLETTER ...</h2>
         <!-- FORMUALRIO DE SUSCRIPCION AL NEWSLETTER -->
         <form class="row g-3">
           <div class="col-md-6">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" />
-          </div>
-          <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Email</label>
             <input type="email" class="form-control" id="inputEmail4" />
           </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" />
+          </div>
           <div class="col-12">
-            <label for="inputAddress" class="form-label">Calle Nro.</label>
+            <label for="inputAddress" class="form-label"
+              >Dirección Particular</label
+            >
             <input
               type="text"
               class="form-control"
               id="inputAddress"
+              placeholder="Calle Nro Ciudad Provincia ..."
+            />
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label"
+              >Dirección Comercial</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="inputAddress2"
               placeholder="Calle Nro ..."
             />
           </div>
@@ -291,98 +282,74 @@
             <input type="text" class="form-control" id="inputZip" />
           </div>
           <div class="col-12">
-            <button type="submit" class="btn btn-light">
+            <button type="submit" class="btn btn-secondary">
               Enviar Formulario
             </button>
           </div>
         </form>
         <!-- FIN DEL FORMULARIO DE SUSCRIPCION -->
       </section>
-      <!-- Texto con detalles de la marca -->
-      <section class="nosotros" id="nosotros">
-        <h2 class="quienes">Quienes Somos</h2>
-        <p>
-          <span class="quienes"><strong>174</strong></span> surge en el mercado
-          en el año 2021 luego de una trayectoria de desarrollo de calzados para
-          terceros.
-        </p>
-        <p>
-          El amor hacia este oficio lo vivenciamos desde hace mucho tiempo.
-          Tratando de lograr un zapato con diseño y calidad, la idea es crear un
-          producto que pueda imponerse mas allá de la moda.
-        </p>
-        <p>
-          Hacemos mucho hincapié en la buena calidad de la materia prima y en
-          una mano obra calificada que trabaja con mucho amor hacia el zapato.
-          La calidad y el producto hacen que fidelicemos clientas y hasta
-          logremos un trato muy cercano, porque detrás de la marca hay un grupo
-          humano que intenta llegar a cada casa.
-        </p>
-        <!--MAPA
-        <iframe
-          src="mapa.html"
-          width="800"
-          height="350"
-          frameborder="0"
-        ></iframe>
-        <script
-          src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-          integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-          crossorigin=""
-        ></script>
-        <script src="mapa.js"></script>
-        FIN DEL MAPA-->
-      </section>
     </main>
+
     <footer class="contacto" id="contacto">
       <section class="ubicacion" id="ubicacion">
-        <section>
-          <ul class="redes" id="redes">
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/twitter.png"
-                  alt="twitter"
-                  width="40"
-                  height="40"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/facebook.png"
-                  alt="facebook"
-                  width="40"
-                  height="40"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/instagram.png"
-                  alt="instagram"
-                  width="40"
-                  height="40"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/images/linkedin.png"
-                  alt="linkedin"
-                  width="40"
-                  height="40"
-                />
-              </a>
-            </li>
-          </ul>
-        </section>
+        Calle: Directorio Nro: 2560 - C.A.B.A.
+      </section>
+             <!--MAPA-->
+        <iframe src="mapa.html" width="800" height="400" frameborder="0"></iframe>        
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+        crossorigin=""></script>
+        <script src="mapa.js"></script>
+          <!--FIN DEL MAPA-->
+      
+
+      <section class="container">
+        <ul class="redes" id="redes">
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/twitter.png"
+                alt="twitter"
+                width="40"
+                height="40"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/facebook.png"
+                alt="facebook"
+                width="40"
+                height="40"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/instagram.png"
+                alt="instagram"
+                width="40"
+                height="40"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/linkedin.png"
+                alt="linkedin"
+                width="40"
+                height="40"
+              />
+            </a>
+          </li>
+        </ul>
       </section>
       <section class="programador" id="programador">
-        Diseño WEB: Grupo C - Argentina Programa 4.0
+        Diseño y programación: Grupo C - Argentina Programa 4.0
       </section>
     </footer>
     <script src="script.js"></script>
