@@ -7,9 +7,6 @@
 }
 
 body {
-  display: grid;
-  min-height: 100vh;
-  grid-template-rows: auto 1fr auto;
   background-color: rgb(245, 235, 235);
 }
 
@@ -79,14 +76,14 @@ li {
 }
 
 .card {
-  margin: 1.2rem;
+  margin: 3.5rem 1.2rem;
   border: none;
   box-shadow: 0.5px 2px 3px rgb(160, 159, 159);
 }
 
 .card:hover .card-img-top {
   transform: scale(1.1);
-  transition: all 0.5s;
+  transition: all 0.7s;
 }
 .card {
   overflow: hidden;
@@ -153,4 +150,8 @@ li {
 
 .programador {
   color: rgb(0, 0, 0);
+}
+
+.programador a:hover {
+  color: darkblue;
 }
