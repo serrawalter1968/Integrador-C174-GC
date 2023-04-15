@@ -80,3 +80,22 @@ let productos = [
     Precio: 100,
   },
 ];
+
+const botones = document.querySelectorAll(".btn-light ");
+
+const cuandoSeHaceClick = (evento) => {
+  let producto = productos.filter((producto) => {
+    return producto.nombre === evento.target.innerText;
+  });
+
+  swal({
+    title: "Modelo: " + producto[0].nombre,
+    text: " Precio: US$ " + producto[0].Precio + " Stock: " + producto[0].Stock,
+    icon: "success",
+    button: "Listo",
+  });
+};
+
+botones.forEach((boton) => {
+  boton.addEventListener("click", cuandoSeHaceClick);
+});

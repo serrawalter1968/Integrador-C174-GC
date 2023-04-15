@@ -93,6 +93,10 @@ li {
   color: black;
 }
 
+.btn-light {
+  border: 1px solid rgb(213, 180, 180);
+}
+
 .suscripcion {
   font-weight: bold;
   font-size: 700;
